@@ -1,0 +1,26 @@
+SamKnows Metric Analyser v1.0.0
+===============================
+
+Period checked:
+
+From: {{ data.dateStart|date("Y-m-d")  }}
+To:   {{ data.dateEnd|date("Y-m-d")  }}
+
+Statistics:
+
+Unit: Megabits per second
+
+Average: {{ data.avg }}
+Min: {{ data.min }}
+Max: {{ data.max }}
+Median: {{ data.median }}
+
+{% if data.underPerformant is not empty %}
+Investigate:
+    {% for dates in data.underPerformant  %}
+    * The period between {{ dates.start}} and {{ dates.end }}
+    was under-performing.
+    {% endfor %}
+
+{% endif %}
+
