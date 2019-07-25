@@ -61,3 +61,8 @@ to jump into the container to run composer, etc ...
 ## Conclusion
 
 Good luck, we hope to hear from you soon!
+
+## Todo
+
+I was unable to get the exact metrics that were on the expected data files of the tests.
+I need to review how I calculate the numbers to make sure they are done properly
